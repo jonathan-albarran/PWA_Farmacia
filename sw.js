@@ -6,8 +6,8 @@ const ARCHIVOS = [
     'style.css',
     'app.js',
     'manifest.json',
-    'img1.png',
-    'img2.png',    
+    'img1.jpg',
+    'img2.jpg',    
 ];
 
 self.addEventListener( 'install', ( e ) => {
