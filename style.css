@@ -37,6 +37,15 @@ body {
 
 .top h1 {
     font-size: 28px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
 }
 
 .status,
