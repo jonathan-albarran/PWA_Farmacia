@@ -7,7 +7,8 @@ const ARCHIVOS = [
     'app.js',
     'manifest.json',
     'img1.jpg',
-    'img2.jpg',    
+    'img2.jpg',
+    'Logo.png'    
 ];
 
 self.addEventListener( 'install', ( e ) => {
@@ -41,4 +42,8 @@ self.addEventListener( 'fetch', ( e ) => {
                     return res;
                 }).catch(()=> caches.match('index.html')) )
     );
+});
+
+self.addEventListener('sync', (e) => {
+    console.log('Sincronización realizada');
 });

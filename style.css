@@ -356,3 +356,28 @@ main {
         max-width: calc(100% - 24px);
     }
 }
+
+/* Pantallas grandes */
+@media (min-width: 1600px) {
+    main {
+        max-width: 1800px;
+        gap: 32px;
+        padding: 0 40px;
+    }
+
+    .top {
+        padding: 35px 40px;
+    }
+
+    .top h1 {
+        font-size: 32px;
+    }
+
+    .panel {
+        padding: 30px;
+    }
+
+    .panel h2 {
+        font-size: 24px;
+    }
+}
