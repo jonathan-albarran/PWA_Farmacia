@@ -47,3 +47,17 @@ self.addEventListener( 'fetch', ( e ) => {
 self.addEventListener('sync', (e) => {
     console.log('Sincronización realizada');
 });
+
+self.addEventListener('push', (event) => {
+    const datos = event.data?.json() ?? {
+        title: 'Notificación',
+        body: 'Tienes una nueva notificación.'
+    };
+
+    event.waitUntil(
+        self.registration.showNotification(datos.title, {
+            body: datos.body,
+            icon: './img1.jpg'
+        })
+    );
+});
