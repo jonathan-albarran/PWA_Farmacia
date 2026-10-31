@@ -5,7 +5,6 @@
     --panel: #fbfbfb;
     --border: #2f33af;
     --error: #d32f2f;
-    --ok: #4caf50;
 }
 
 * {
@@ -15,11 +14,11 @@
 }
 
 body {
+    min-height: 100vh;
     background: var(--bg);
     color: var(--color);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.5;
-    min-height: 100vh;
 }
 
 /* Encabezado */
@@ -36,10 +35,10 @@ body {
 }
 
 .top h1 {
-    font-size: 28px;
     display: flex;
     align-items: center;
     gap: 10px;
+    font-size: 28px;
 }
 
 .logo {
@@ -62,13 +61,12 @@ body {
     font-weight: 600;
 }
 
-/* Contenido */
+/* Contenido y paneles */
 
 main {
     display: grid;
     grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
     gap: 24px;
-    width: 100%;
     max-width: 1400px;
     margin: 30px auto;
     padding: 0 24px;
@@ -141,7 +139,7 @@ main {
 .field input:focus {
     outline: none;
     border-color: var(--border);
-    box-shadow: 0 0 0 3px rgba(47, 51, 175, 0.12);
+    box-shadow: 0 0 0 3px #2f33af1f;
 }
 
 .field input:disabled {
@@ -167,14 +165,6 @@ main {
 .error {
     color: var(--error);
     overflow-wrap: anywhere;
-}
-
-.field input.invalido {
-    border-color: var(--error);
-}
-
-.field input.valido {
-    border-color: var(--ok);
 }
 
 /* Botones */
@@ -252,8 +242,6 @@ main {
     cursor: pointer;
 }
 
-/* Lista vacía */
-
 .vacio {
     padding: 25px 15px;
     background: #f5f5f5;
@@ -277,7 +265,7 @@ main {
     background: #222;
     color: #fff;
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 12px #0003;
     overflow-wrap: anywhere;
 }
 
@@ -285,7 +273,7 @@ main {
     display: block;
 }
 
-/* Tabletas */
+/* Diseño responsivo */
 
 @media (max-width: 1024px) {
     main {
@@ -294,8 +282,6 @@ main {
         margin: 24px auto;
     }
 }
-
-/* Celulares */
 
 @media (max-width: 600px) {
     .top {
@@ -357,7 +343,6 @@ main {
     }
 }
 
-/* Pantallas grandes */
 @media (min-width: 1600px) {
     main {
         max-width: 1800px;
